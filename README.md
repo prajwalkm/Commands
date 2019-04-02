@@ -26,3 +26,12 @@ My useful commands
    If you are using zsh and have the EXTENDED_GLOB option enabled, the caret symbol won't work. You can use ~1 instead.
 
    git checkout $(git rev-list -n 1 HEAD -- "$file")~1 -- "$file" 
+
+
+3.if local branch has changes and commited, but you dont need changes but mach with branhc in server
+
+  git fetch origin/develop
+  git reset --hard origin/develop
+  
+  this removes the local changes in branch and mergers with origin 
+
