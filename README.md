@@ -8,6 +8,15 @@ My useful commands
   
 2. redis-cli --scan --pattern 'keys*' | xargs redis-cli del  :(deletes keys matching pattern)
 
+3. In case you are trying to dump/restore a key from the command line (which is what I needed to do when I found this        
+   question), Redis has some non-obvious quirks. Please see this answer for a more detailed explanation.
+
+   The short answer is to dump/restore as follows:
+
+   redis-cli --raw dump mykey | head -c-1 > myfile
+   
+   cat myfile | redis-cli -x restore mynewkey 0
+
 
 ----GIT Commands
 
