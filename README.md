@@ -44,3 +44,12 @@ My useful commands
   
   this removes the local changes in branch and mergers with origin 
 
+4. Squash two commits into one
+   git rebase -i HEAD~2
+   
+   HERE 2 squash last two commits
+   replace pike of second commit to squash
+   
+   and save
+   done
+
